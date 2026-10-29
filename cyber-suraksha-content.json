@@ -1,0 +1,306 @@
+{
+  "schemaVersion": "2.0.0",
+  "site": {
+    "name": "KITS CSI - Student Chapter",
+    "title": "Cyber Suraksha 2026 | KITS CSI - Student Chapter",
+    "language": "en",
+    "description": "Official invitation to Cyber Suraksha 2026 by KITS CSI - Student Chapter at KKR & KSR Institute of Technology and Sciences, Guntur.",
+    "organizer": {
+      "name": "KITS CSI - Student Chapter",
+      "abbreviation": "CSI"
+    },
+    "institution": {
+      "name": "KKR & KSR Institute of Technology and Sciences",
+      "location": "Vinjanampadu, Guntur, Andhra Pradesh, India"
+    }
+  },
+  "theme": {
+    "creativeDirection": "Premium cybersecurity visual design with restrained 3D glassmorphism and formal invitation styling.",
+    "colors": {
+      "navy": "#06162b",
+      "navySecondary": "#09284a",
+      "blue": "#168eea",
+      "cyan": "#48d9ff",
+      "deepIndigo": "#111321",
+      "aubergine": "#292139",
+      "lavender": "#cec1e1",
+      "silver": "#b8c0d0",
+      "paper": "#f2f8ff",
+      "white": "#ffffff",
+      "gold": "#d6ad5e"
+    },
+    "fonts": {
+      "display": "\"Bodoni Moda\", Georgia, \"Times New Roman\", serif",
+      "body": "\"Hanken Grotesk\", \"Segoe UI\", Arial, sans-serif"
+    },
+    "responsiveBreakpointsPx": [380, 440, 680, 900, 1200],
+    "motion": {
+      "supportsReducedMotion": true,
+      "cardTilt": "Pointer devices only; small angles; reset on pointer leave.",
+      "scrollReveal": "IntersectionObserver with visible fallback."
+    }
+  },
+  "navigation": [
+    { "label": "Invitations", "href": "#invitees" },
+    { "label": "Resource persons", "href": "#speakers" },
+    { "label": "Event details", "href": "#event-details" },
+    { "label": "Explore invitations", "href": "#invitees", "style": "callToAction" }
+  ],
+  "event": {
+    "id": "cyber-suraksha-2026",
+    "name": "Cyber Suraksha",
+    "programTitle": "Cyber Security Awareness Program",
+    "motto": "Be aware. Be safe. Be cyber smart.",
+    "description": "An institutional cybersecurity awareness initiative promoting safer digital habits, responsible technology use, online threat awareness, and informed digital practices.",
+    "date": {
+      "iso": "2026-10-31",
+      "display": "Saturday, 31 October 2026"
+    },
+    "time": {
+      "confirmed": true,
+      "timeZone": "Asia/Kolkata",
+      "display": "12:30 PM – 3:00 PM",
+      "start": "12:30",
+      "end": "15:00"
+    },
+    "venue": {
+      "name": "Abdul Kalam Hall",
+      "institution": "KKR & KSR Institute of Technology and Sciences",
+      "location": "Vinjanampadu, Guntur, Andhra Pradesh, India"
+    },
+    "organizer": "KITS CSI - Student Chapter"
+  },
+  "events": [
+    {
+      "id": "cyber-security-awareness",
+      "title": "Cyber Suraksha - Cyber Security Awareness Program",
+      "date": "2026-10-31",
+      "dateDisplay": "Saturday, 31 October 2026",
+      "timeZone": "Asia/Kolkata",
+      "start": "12:30",
+      "end": "15:00",
+      "timeDisplay": "12:30 PM – 3:00 PM",
+      "venue": "Abdul Kalam Hall",
+      "location": "KKR & KSR Institute of Technology and Sciences, Vinjanampadu, Guntur, Andhra Pradesh, India",
+      "description": "Cyber security awareness program promoting safer digital habits, responsible technology use, online threat awareness, and informed digital practices. Organized by KITS CSI - Student Chapter."
+    },
+    {
+      "id": "academic-calendar-launch",
+      "title": "KITS-CSI Academic Calendar Launch",
+      "date": "2026-10-31",
+      "dateDisplay": "Saturday, 31 October 2026",
+      "timeZone": "Asia/Kolkata",
+      "start": "12:30",
+      "end": "15:00",
+      "timeDisplay": "12:30 PM – 3:00 PM",
+      "venue": "Abdul Kalam Hall",
+      "location": "KKR & KSR Institute of Technology and Sciences, Vinjanampadu, Guntur, Andhra Pradesh, India",
+      "description": "Launch of the KITS-CSI academic calendar, held along with the Cyber Security Awareness Program."
+    }
+  ],
+  "pages": {
+    "home": {
+      "path": "index.html",
+      "sections": [
+        {
+          "id": "home",
+          "type": "hero",
+          "eyebrow": "KITS CSI - Student Chapter presents",
+          "title": "Cyber Suraksha",
+          "subtitle": "Cyber Security Awareness Program & KITS-CSI Academic Calendar Launch",
+          "motto": "Be aware. Be safe. Be cyber smart.",
+          "description": "An institutional cybersecurity awareness initiative promoting safer digital habits, responsible technology use, online threat awareness, and informed digital practices.",
+          "actions": [
+            { "label": "Explore Invitations", "href": "#invitees" },
+            { "label": "Explore Event", "href": "#event-details" }
+          ]
+        },
+        {
+          "id": "purpose",
+          "type": "programHighlights",
+          "title": "Building a safer digital future.",
+          "description": "Cyber Suraksha brings students and the wider community together to learn practical ways to stay safer online. The program encourages informed choices, responsible technology use, and awareness of common cyber risks.",
+          "items": [
+            {
+              "icon": "◇",
+              "title": "Cyber awareness",
+              "description": "Understand online safety and responsible digital behaviour."
+            },
+            {
+              "icon": "⌁",
+              "title": "Recognize threats",
+              "description": "Learn to identify common cyber risks and suspicious activity."
+            },
+            {
+              "icon": "◎",
+              "title": "Expert guidance",
+              "description": "Encourage informed decisions and practical safety habits."
+            },
+            {
+              "icon": "✓",
+              "title": "Stay protected",
+              "description": "Take steps towards a safer and more secure digital future."
+            }
+          ]
+        },
+        {
+          "id": "invitees",
+          "type": "formalInvitees",
+          "title": "Personal invitations",
+          "description": "We would be honoured to welcome our distinguished invitees to Cyber Suraksha and the KITS-CSI Academic Calendar Launch.",
+          "linkPattern": "invitations/{id}.html"
+        },
+        {
+          "id": "speakers",
+          "type": "resourcePersons",
+          "title": "Learn from experienced voices.",
+          "description": "Resource persons remain separate from the formal invitation directory."
+        },
+        {
+          "id": "event-details",
+          "type": "eventDetails",
+          "timeDisplay": "12:30 PM – 3:00 PM",
+          "eventRefs": ["cyber-security-awareness", "academic-calendar-launch"]
+        },
+        {
+          "id": "closing",
+          "type": "closing",
+          "title": "Let’s build a safer tomorrow.",
+          "description": "We look forward to your gracious presence at Cyber Suraksha."
+        }
+      ],
+      "footer": {
+        "title": "CYBER SURAKSHA · 2026",
+        "program": "Cyber Security Awareness Program",
+        "organizer": "KITS CSI - Student Chapter",
+        "institution": "KKR & KSR Institute of Technology and Sciences",
+        "location": "Vinjanampadu, Guntur, Andhra Pradesh, India"
+      }
+    },
+    "invitations": {
+      "directory": "invitations/",
+      "files": [
+        "invitations/chairman.html",
+        "invitations/secretary.html",
+        "invitations/principal.html",
+        "invitations/director.html"
+      ],
+      "actions": [
+        "Print / Save as PDF",
+        "Add to Google Calendar – Cyber Suraksha awareness program",
+        "Add to Google Calendar – KITS-CSI Academic Calendar Launch",
+        "Share Invitation with copy-link fallback",
+        "Back to Home"
+      ]
+    }
+  },
+  "invitees": [
+    {
+      "id": "chairman",
+      "name": "Dr. K. Subba Rao",
+      "role": "Chairman",
+      "salutation": "Respected Sir,",
+      "photo": "chairman.jpg",
+      "personalPage": "invitations/chairman.html",
+      "message": "We would be honoured by your gracious presence at Cyber Suraksha, a Cyber Security Awareness Program organised by the Computer Society of India (CSI), together with the KITS-CSI Academic Calendar Launch. Your guidance and encouragement would be invaluable as we promote responsible and secure digital practices among students."
+    },
+    {
+      "id": "secretary",
+      "name": "Sri Koyi Sekhar",
+      "role": "Secretary",
+      "salutation": "Respected Sir,",
+      "photo": "secretary.jpg",
+      "personalPage": "invitations/secretary.html",
+      "message": "The Computer Society of India (CSI) cordially invites you to Cyber Suraksha, a Cyber Security Awareness Program, together with the KITS-CSI Academic Calendar Launch. We would be grateful for your gracious presence and encouragement as students learn about online safety, digital responsibility, and cybersecurity awareness."
+    },
+    {
+      "id": "principal",
+      "name": "Dr. P. Babu",
+      "role": "Principal",
+      "salutation": "Respected Sir,",
+      "photo": "principalnew.jpg",
+      "personalPage": "invitations/principal.html",
+      "message": "We respectfully invite you to Cyber Suraksha, a Cyber Security Awareness Program organised by the Computer Society of India (CSI), together with the KITS-CSI Academic Calendar Launch. Your presence would encourage our students to strengthen their understanding of cyber safety and responsible use of technology."
+    },
+    {
+      "id": "director",
+      "name": "Dr. K. Haribabu garu",
+      "role": "Director",
+      "salutation": "Respected Sir,",
+      "photo": "Harisir_1578295527.jpg",
+      "personalPage": "invitations/director.html",
+      "message": "It is our privilege to extend this invitation to Cyber Suraksha, a Cyber Security Awareness Program organised by the Computer Society of India (CSI), together with the KITS-CSI Academic Calendar Launch. We would be honoured by your presence and support in encouraging students to build awareness of cyber threats and safer digital practices."
+    }
+  ],
+  "speakers": [
+    {
+      "id": "ramana",
+      "name": "Dr. D. V. Ramana",
+      "role": "Resource Person",
+      "designation": "Director, SR3 Global, Hyderabad; Vice Chairman, Computer Society of India (CSI), Hyderabad Chapter.",
+      "photo": "https://lh3.googleusercontent.com/aida-public/AB6AXuA7qfVrlMCGVXcmaUd2bm80sUVWK14SonCJaSaQOdMx07vodBT9f2iVxDTqsqPGi1eVMNHEml-46S7HDznlpzBSjIjVVI-ZZIg6aAqjAJ6Q9hQwnCtVLulEF4XfabsxUHBgxeMkmTnyYq5bB1K7Vvra1yEnrafG8_x5GVYbR_uDPkNDiaKH5kFD0wwPP3q7iMTMpbzWcUtmiKwb723WU21GRA3ErmBZ7kB2nOn9z6KApuF52zXucSTS_w",
+      "urlLoadedInBrowserCheck": true,
+      "identityIndependentlyVerified": false
+    },
+    {
+      "id": "sudhakar",
+      "name": "Mr. Sudhakar",
+      "role": "Resource Person",
+      "designation": "Former Chairman, CSI Hyderabad Chapter.",
+      "photo": "https://lh3.googleusercontent.com/aida-public/AB6AXuCvK6jb6FC8fJSDQgTeLgEsxPufknlOCstxyqCit_qhmBDUR-_lobRSZIiyb2rAaHRCFJb8pxbLVwv9mK24KCXA1H4-VjTRws1WqrWaIcFn7UmXt73-l2w8i5MNsIy_tJTdBtUORGq0rwHJcydUPApxV84op07p4pQHMw45WfDA6NdvTxyBHQWIeBCJplIteIgiz1jrY9n8aB1V7WJQT7GFdS7xk_r0dWFr4Frerq0SqMQUUh0AaiCbYQ",
+      "urlLoadedInBrowserCheck": true,
+      "identityIndependentlyVerified": false
+    }
+  ],
+  "assets": {
+    "imageDirectory": "./",
+    "inviteePhotos": [
+      { "path": "chairman.jpg", "usedBy": "chairman", "available": true },
+      { "path": "secretary.jpg", "usedBy": "secretary", "available": true },
+      { "path": "principalnew.jpg", "usedBy": "principal", "available": true },
+      { "path": "Harisir_1578295527.jpg", "usedBy": "director", "available": true }
+    ],
+    "logos": [
+      {
+        "name": "KITS institutional logo",
+        "expectedPath": "images/kits-logo.png",
+        "available": true,
+        "aspectRatio": "1:1",
+        "fit": "contain"
+      },
+      {
+        "name": "CSI logo",
+        "expectedPath": "images/csi-logo.png",
+        "available": true,
+        "aspectRatio": "1:1",
+        "fit": "contain"
+      }
+    ],
+    "fallbackBehavior": "If a portrait fails to load, show a clear unavailable-photo message without breaking the page."
+  },
+  "features": {
+    "responsiveNavigation": true,
+    "independentInvitationPages": true,
+    "threeDimensionalCards": "Subtle pointer tilt on desktop only.",
+    "scrollReveal": true,
+    "reducedMotionSupport": true,
+    "printOrSaveAsPdf": true,
+    "sharing": {
+      "webShare": true,
+      "clipboardFallback": true,
+      "manualCopyFallback": true
+    },
+    "calendarDownload": {
+      "provider": "Google Calendar",
+      "method": "TEMPLATE",
+      "opensInNewTab": true,
+      "separateEventLinks": true
+    },
+    "staticHosting": true
+  },
+  "confirmationRequired": [
+    "The KITS-CSI academic calendar launch was described as taking place along with the awareness program. It uses the same date, time, and venue for its separate calendar link; confirm if the launch has a different time or room.",
+    "The original source pages disagreed about the time (12:00 PM–3:00 PM and 2:00 PM–5:00 PM). The organizer-confirmed time is 12:30 PM–3:00 PM on 31 October 2026.",
+    "Resource-person photo URLs retained from code.html loaded in the local browser check, but the identities shown in the photographs have not been independently verified."
+  ]
+}
