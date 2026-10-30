@@ -14,13 +14,13 @@ Then open `http://localhost:8000/`. Do not test by opening the files through `fi
 
 ## Pages and files
 
-- `index.html` — event home page, program overview, promotional video, quick facts, invitation directory, resource persons, and event details.
-- `invitations/chairman.html`, `invitations/secretary.html`, `invitations/principal.html`, `invitations/director.html` — directly accessible personalized invitations.
-- `css/style.css` — shared responsive styles, glass effects, accessibility, and print layout.
+- `index.html` — event home page with a cinematic indigo-and-lavender glass-flow hero, program overview, promotional video, quick facts, invitation directory, resource persons, and event details.
+- `invitations/chairman.html`, `invitations/secretary.html`, `invitations/principal.html`, `invitations/director.html` — directly accessible personalized invitations, each with the promotional video and event actions.
+- `css/style.css` — shared responsive glass-flow theme, accessibility, video presentation, and print layout.
 - `js/config.js` — shared event timing, separate event records, and invitee/speaker data.
-- `js/main.js` — home navigation, directory cards, Google Calendar links, image fallbacks, and subtle interactions.
+- `js/main.js` — home navigation, directory cards, Google Calendar links, image fallbacks, card interactions, and the draggable glass-flow hero.
 - `js/invitations.js` — print, sharing, and Google Calendar actions.
-- `promo/cyber-suraksha-promo.mp4` — web-ready promotional video embedded on the home page with native playback controls, a boosted quiet opening, fast-start MP4 metadata, and AAC-LC stereo audio at 48 kHz.
+- `promo/cyber-suraksha-promo.mp4` — web-ready promotional video embedded on the home page and all four personalized invitations with native playback controls, a boosted quiet opening, fast-start MP4 metadata, and AAC-LC stereo audio at 48 kHz.
 - `promo/WhatsApp Video 2026-10-29 at 21.24.19.mp4` — original promotional-video source, preserved unchanged.
 - `.vercelignore` — excludes only the archived HTML originals and unused source video from Vercel deployment; the active site, legacy URL folders, invitations, and playable video remain deployable.
 - `cyber-suraksha-content.json` — structured content/data reference for future development.
@@ -57,7 +57,7 @@ The original HTML also referenced externally hosted portraits for Dr. D. V. Rama
 
 ## Deployment
 
-Deploy the project folder as a static site to GitHub Pages, Netlify, or another static host. All page, style, script, portrait, video, and invitation links use relative paths, so the project can be hosted at a domain root or under a project subdirectory. Individual invitation files do not depend on client-side routing. Keep both files in `promo/`; the page uses the web-ready copy, while the original is retained as the source.
+Deploy the project folder as a static site to GitHub Pages, Netlify, or another static host. All page, style, script, portrait, video, and invitation links use relative paths, so the project can be hosted at a domain root or under a project subdirectory. Individual invitation files do not depend on client-side routing. Keep both files in `promo/`; the home page and each personal invitation use the web-ready copy, while the original is retained as the source.
 
 Use the home page as the publishing entry point. Before publishing, verify the external resource-person portraits and confirm whether the Academic Calendar Launch has a separate time or room.
 
