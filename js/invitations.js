@@ -29,25 +29,6 @@
     }, { once: true });
   });
 
-  if (window.matchMedia("(hover: hover) and (pointer: fine)").matches
-    && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    document.querySelectorAll(".letter-card, .portrait-frame, .detail-tile, .letterhead, .invitation-film .promo-video-card")
-      .forEach(function (surface) {
-        surface.addEventListener("pointermove", function (event) {
-          const bounds = surface.getBoundingClientRect();
-          const x = (event.clientX - bounds.left) / bounds.width;
-          const y = (event.clientY - bounds.top) / bounds.height;
-          const tilt = surface.matches(".letter-card") ? 2 : 4;
-          surface.style.setProperty("--mx", (x * 100) + "%");
-          surface.style.setProperty("--my", (y * 100) + "%");
-          surface.style.transform = "perspective(1200px) rotateX(" + ((.5 - y) * tilt) + "deg) rotateY(" + ((x - .5) * tilt) + "deg) translateY(-1px)";
-        });
-        surface.addEventListener("pointerleave", function () {
-          surface.style.transform = "";
-        });
-      });
-  }
-
   document.querySelectorAll("[data-print]").forEach(function (button) {
     button.addEventListener("click", function () {
       window.print();

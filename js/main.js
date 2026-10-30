@@ -25,10 +25,7 @@
   }
 
   document.querySelectorAll("[data-event-date]").forEach(function (element) {
-    const dateDisplay = element.dataset.eventDateFormat === "month-uppercase"
-      ? config.event.dateDisplay.replace(/^[^,]+,\s*/, "").toUpperCase()
-      : config.event.dateDisplay;
-    element.textContent = dateDisplay;
+    element.textContent = config.event.dateDisplay;
   });
   document.querySelectorAll("[data-event-time]").forEach(function (element) {
     element.textContent = config.event.timeDisplay;
@@ -159,20 +156,15 @@
     });
   }
 
-  if (window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches
-    && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    const tiltTargets = document.querySelectorAll(
-      ".guest-card, .speaker-card, .event-detail, .highlight-card, .stat-card, .promo-video-card, .section-heading"
-    );
-    tiltTargets.forEach(function (card) {
+  if (window.matchMedia && window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+    document.querySelectorAll(".guest-card").forEach(function (card) {
       card.addEventListener("pointermove", function (event) {
         const bounds = card.getBoundingClientRect();
         const x = (event.clientX - bounds.left) / bounds.width;
         const y = (event.clientY - bounds.top) / bounds.height;
-        const tilt = card.matches(".section-heading, .stat-card") ? 3 : 5;
         card.style.setProperty("--mx", (x * 100) + "%");
         card.style.setProperty("--my", (y * 100) + "%");
-        card.style.transform = "perspective(1100px) rotateX(" + ((.5 - y) * tilt) + "deg) rotateY(" + ((x - .5) * tilt) + "deg) translateY(-2px) scale3d(1.008, 1.008, 1.008)";
+        card.style.transform = "rotateX(" + ((.5 - y) * 5) + "deg) rotateY(" + ((x - .5) * 6) + "deg) translateY(-3px)";
       });
       card.addEventListener("pointerleave", function () {
         card.style.transform = "";
@@ -193,40 +185,6 @@
     document.querySelectorAll("[data-reveal]").forEach(function (element) {
       observer.observe(element);
     });
-  }
-
-  const hero = document.querySelector(".hero");
-  if (hero && window.matchMedia("(hover: hover) and (pointer: fine)").matches
-    && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-    let activePointerId = null;
-    hero.addEventListener("pointerdown", function (event) {
-      if (event.pointerType !== "mouse" || event.target.closest("a, button, video")) {
-        return;
-      }
-      activePointerId = event.pointerId;
-      hero.classList.add("is-dragging");
-    });
-    window.addEventListener("pointermove", function (event) {
-      if (event.pointerId !== activePointerId) {
-        return;
-      }
-      const bounds = hero.getBoundingClientRect();
-      const x = (event.clientX - bounds.left) / bounds.width;
-      const y = (event.clientY - bounds.top) / bounds.height;
-      hero.style.setProperty("--flow-rotate-x", ((.5 - y) * 5).toFixed(2) + "deg");
-      hero.style.setProperty("--flow-rotate-y", ((x - .5) * 7).toFixed(2) + "deg");
-    });
-    function resetHeroFlow(event) {
-      if (event.pointerId !== activePointerId) {
-        return;
-      }
-      activePointerId = null;
-      hero.classList.remove("is-dragging");
-      hero.style.removeProperty("--flow-rotate-x");
-      hero.style.removeProperty("--flow-rotate-y");
-    }
-    window.addEventListener("pointerup", resetHeroFlow);
-    window.addEventListener("pointercancel", resetHeroFlow);
   }
 
   const shield = document.querySelector(".shield-card");
