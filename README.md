@@ -14,12 +14,15 @@ Then open `http://localhost:8000/`. Do not test by opening the files through `fi
 
 ## Pages and files
 
-- `index.html` — event home page, invitation directory, resource persons, and event details.
+- `index.html` — event home page, program overview, promotional video, quick facts, invitation directory, resource persons, and event details.
 - `invitations/chairman.html`, `invitations/secretary.html`, `invitations/principal.html`, `invitations/director.html` — directly accessible personalized invitations.
 - `css/style.css` — shared responsive styles, glass effects, accessibility, and print layout.
 - `js/config.js` — shared event timing, separate event records, and invitee/speaker data.
 - `js/main.js` — home navigation, directory cards, Google Calendar links, image fallbacks, and subtle interactions.
 - `js/invitations.js` — print, sharing, and Google Calendar actions.
+- `promo/cyber-suraksha-promo.mp4` — web-ready promotional video embedded on the home page with native playback controls, a boosted quiet opening, fast-start MP4 metadata, and AAC-LC stereo audio at 48 kHz.
+- `promo/WhatsApp Video 2026-10-29 at 21.24.19.mp4` — original promotional-video source, preserved unchanged.
+- `.vercelignore` — excludes only the archived HTML originals and unused source video from Vercel deployment; the active site, legacy URL folders, invitations, and playable video remain deployable.
 - `cyber-suraksha-content.json` — structured content/data reference for future development.
 - `../cyber-suraksha-invitatio-originals/` — pre-change copies of the original `index.html` and `code.html`, kept outside the deployable site root.
 
@@ -54,7 +57,7 @@ The original HTML also referenced externally hosted portraits for Dr. D. V. Rama
 
 ## Deployment
 
-Deploy the project folder as a static site to GitHub Pages, Netlify, or another static host. All page, style, script, portrait, and invitation links use relative paths, so the project can be hosted at a domain root or under a project subdirectory. Individual invitation files do not depend on client-side routing.
+Deploy the project folder as a static site to GitHub Pages, Netlify, or another static host. All page, style, script, portrait, video, and invitation links use relative paths, so the project can be hosted at a domain root or under a project subdirectory. Individual invitation files do not depend on client-side routing. Keep both files in `promo/`; the page uses the web-ready copy, while the original is retained as the source.
 
 Use the home page as the publishing entry point. Before publishing, verify the external resource-person portraits and confirm whether the Academic Calendar Launch has a separate time or room.
 
@@ -62,12 +65,13 @@ Use the home page as the publishing entry point. Before publishing, verify the e
 
 This is a static HTML/CSS/JavaScript site and does not require a build command or install step.
 
-1. Import the GitHub repository into Vercel and set the project root to the repository root.
+1. Import the GitHub repository into Vercel and set the project root to the repository root (`Invitations`).
 2. Select **Other** as the framework preset.
-3. Leave the build command and install command empty. Use `.` as the output directory if Vercel requires one.
-4. Deploy. Vercel serves `index.html` from the project root and the individual invitation files directly.
+3. Leave the install and build commands empty. Leave the output-directory override unset so Vercel serves the project root; if the dashboard requires an output directory, use `.`.
+4. Do not configure clean URLs, trailing-slash changes, or rewrites. Vercel serves the existing paths as deployed, including `/`, `/invitations/chairman.html`, `/invitations/secretary.html`, `/invitations/principal.html`, `/invitations/director.html`, `/chairman/`, `/secretary/`, `/principal/`, `/director/`, and `/code.html`. The legacy invitation folders and `code.html` keep their existing HTML redirects; this deployment adds no path renames. `.vercelignore` excludes only archived source copies, not any current page or legacy route.
+5. Deploy. Verify the video at `/promo/cyber-suraksha-promo.mp4` and the four invitation links on the deployed domain.
 
-Alternatively, install the Vercel CLI and run `vercel --prod` from the project root. The generated `.vercel/` directory is ignored by Git.
+Alternatively, run `vercel --prod` from the project root using an authenticated Vercel CLI. The generated `.vercel/` directory is ignored by Git. Vercel will assign a deployment hostname; to preserve an existing public domain as well as its paths, add that domain to the Vercel project and update its DNS as directed by Vercel.
 
 ## Validation
 
