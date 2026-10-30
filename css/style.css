@@ -751,9 +751,155 @@ body { color: #e6f4ff; }
   .motion-ready [data-reveal], .motion-ready [data-reveal].is-visible { opacity: 1; transform: none; }
 }
 
+.hod-invitation-section {
+  position: relative;
+  overflow: hidden;
+  color: #eff9ff;
+  background:
+    radial-gradient(ellipse at 10% 12%, rgba(0, 174, 239, .2), transparent 38%),
+    radial-gradient(ellipse at 92% 84%, rgba(23, 105, 212, .24), transparent 42%),
+    linear-gradient(135deg, #06182f, #0a2b4d 52%, #071a37);
+}
+.hod-invitation-section::before,
+.hod-invitation-section::after {
+  position: absolute;
+  content: "";
+  pointer-events: none;
+}
+.hod-invitation-section::before {
+  inset: 0;
+  opacity: .18;
+  background-image: linear-gradient(rgba(99, 215, 255, .16) 1px, transparent 1px), linear-gradient(90deg, rgba(99, 215, 255, .16) 1px, transparent 1px);
+  background-size: 46px 46px;
+  mask-image: radial-gradient(ellipse at center, black, transparent 82%);
+}
+.hod-invitation-section::after {
+  top: -9rem;
+  right: -7rem;
+  width: 25rem;
+  aspect-ratio: 1;
+  border: 1px solid rgba(98, 221, 255, .17);
+  border-radius: 50%;
+  box-shadow: 0 0 0 30px rgba(98, 221, 255, .035), 0 0 0 68px rgba(98, 221, 255, .025);
+}
+.hod-invitation-section > .wrap { position: relative; z-index: 1; }
+.hod-invitation-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(150px, .34fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 5vw, 4rem);
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  border: 1px solid rgba(132, 225, 255, .38);
+  border-radius: 1.6rem;
+  background: linear-gradient(145deg, rgba(225, 247, 255, .12), rgba(54, 153, 213, .055) 48%, rgba(2, 20, 42, .48));
+  box-shadow: inset 0 1px rgba(255,255,255,.2), 0 32px 80px rgba(0, 8, 24, .32), 0 0 48px rgba(37, 178, 232, .09);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.hod-invitation-panel::before {
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  width: 7rem;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, #a9f1ff, transparent);
+  box-shadow: 0 0 18px rgba(72, 217, 255, .68);
+}
+.hod-invitation-art {
+  display: grid;
+  justify-items: center;
+  gap: .85rem;
+  color: #a7eaff;
+  font-size: .62rem;
+  font-weight: 850;
+  letter-spacing: .16em;
+  text-align: center;
+  text-transform: uppercase;
+}
+.hod-invitation-art svg { width: min(100%, 190px); overflow: visible; filter: drop-shadow(0 0 20px rgba(48, 197, 244, .24)); }
+.hod-invitation-art path { stroke: #78e2ff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 3; }
+.hod-invitation-art path:first-child { fill: rgba(37, 160, 219, .08); stroke-width: 2; }
+.hod-invitation-art path:nth-child(2) { stroke: rgba(120, 226, 255, .44); stroke-width: 1.5; }
+.hod-invitation-art circle { stroke: rgba(120, 226, 255, .12); stroke-width: 1; }
+.hod-invitation-content { min-width: 0; }
+.hod-invitation-label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  margin: 0;
+  padding: .48rem .8rem;
+  border: 1px solid rgba(112, 221, 255, .32);
+  border-radius: 99px;
+  background: rgba(25, 158, 217, .12);
+  color: #9deaff;
+  font-size: .66rem;
+  font-weight: 850;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  box-shadow: inset 0 1px rgba(255,255,255,.12), 0 0 24px rgba(41, 178, 225, .1);
+}
+.hod-invitation-label span { color: #e1fbff; }
+.hod-invitation-content h2 {
+  max-width: 800px;
+  margin: 1.1rem 0 1rem;
+  color: #f3fbff;
+  font: 500 clamp(2rem, 4.5vw, 3.55rem)/1.08 "Bodoni Moda", Georgia, serif;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+  text-shadow: 0 8px 32px rgba(54, 178, 228, .15);
+}
+.hod-invitation-message { margin: .8rem 0 0; color: #d3e6f4; font-size: clamp(.94rem, 1.2vw, 1.05rem); line-height: 1.85; }
+.hod-invitation-message strong { color: #a6eeff; font-weight: 800; text-shadow: 0 0 18px rgba(72, 217, 255, .16); }
+.hod-occasion-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .85rem; margin-top: 1.5rem; }
+.hod-occasion {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: .9rem;
+  padding: 1rem;
+  border: 1px solid rgba(130, 219, 255, .26);
+  border-radius: 1rem;
+  background: linear-gradient(145deg, rgba(223, 246, 255, .1), rgba(43, 139, 199, .055));
+  box-shadow: inset 0 1px rgba(255,255,255,.13), 0 14px 30px rgba(0, 8, 24, .16);
+}
+.hod-occasion-icon {
+  display: grid;
+  width: 2.8rem;
+  height: 2.8rem;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid rgba(118, 226, 255, .38);
+  border-radius: .85rem;
+  background: linear-gradient(145deg, rgba(77, 212, 255, .2), rgba(15, 107, 174, .12));
+  color: #a7efff;
+  font-size: 1.35rem;
+  box-shadow: inset 0 1px rgba(255,255,255,.18), 0 0 22px rgba(45, 181, 230, .1);
+}
+.hod-calendar-icon svg { width: 1.35rem; }
+.hod-calendar-icon rect, .hod-calendar-icon path { stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 1.8; }
+.hod-occasion h3 { margin: 0; color: #e9f9ff; font-size: .82rem; font-weight: 850; letter-spacing: .06em; line-height: 1.4; }
+.hod-occasion p { margin: .25rem 0 0; color: #b8d2e4; font-size: .79rem; line-height: 1.5; }
+
+@media (max-width: 760px) {
+  .hod-invitation-panel { grid-template-columns: 1fr; gap: 1.3rem; }
+  .hod-invitation-art { display: flex; justify-content: flex-start; }
+  .hod-invitation-art svg { width: 4rem; }
+  .hod-invitation-art span { letter-spacing: .12em; }
+}
+@media (max-width: 520px) {
+  .hod-invitation-panel { padding: 1.25rem; border-radius: 1.2rem; }
+  .hod-invitation-content h2 { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+  .hod-occasion-grid { grid-template-columns: 1fr; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
 }
+.invitation-page .promo-section { color: inherit; background: transparent; }
+.invitation-page .promo-video-card { background: transparent; box-shadow: none; }
 @media print {
   @page { margin: 16mm; }
   :root { color-scheme: light; }
